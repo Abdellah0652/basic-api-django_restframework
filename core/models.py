@@ -59,7 +59,7 @@ class Document(models.Model):
     )
 
     dtype = models.CharField(choices=DOC_TYPES, max_length=2)
-    doc_number = models.CharField(max_length=50)
+    doc_number = models.CharField(max_length=90)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
 
     def __str__(self):

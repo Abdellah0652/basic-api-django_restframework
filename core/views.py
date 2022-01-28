@@ -38,7 +38,6 @@ class CustomerViewSet(viewsets.ModelViewSet):
             customers = Customer.objects.filter(active=status)
 
         print('address = ' + str(address) + ' status = ' + str(status))
-        print('\n', '---------- get_queryset ----------', '\n')
         return customers
 
     """def list(self, request, *args, **kwargs):
