@@ -84,6 +84,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
         customer.save()
 
         serializer = CustomerSerializer(customer)
+        print('\n', '--------------- update ----------------', '\n')
         return Response(serializer.data)
 
     # had function bach tbdl line w7d f database dyalk  --> PATCH
@@ -96,6 +97,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
         customer.save()
 
         serializer = CustomerSerializer(customer)
+        print('\n', '--------------- partial_update ----------------', '\n')
         return Response(serializer.data)
 
     def destroy(self, request, *args, **kwargs):
