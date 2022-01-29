@@ -129,6 +129,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
 
         serializer = CustomerSerializer(customers, many=True)
         print('--------------- deactivate_all ----------------', '\n')
+        print('-------------------------------', '\n')
         return Response(serializer.data)
 
     # ou hadi makatsm7ch tzid detail like tzid ina id briti specifik
@@ -138,10 +139,8 @@ class CustomerViewSet(viewsets.ModelViewSet):
         customers.update(active=True)
 
         serializer = CustomerSerializer(customers, many=True)
-        print('\n', '--------------- activate_all ----------------', '\n')
         return Response(serializer.data)
 
-    # had function ka dir changement ila true trdo false ou 3ks tahouwa
     @action(detail=False, methods=['POST'])
     def change_status(self, request, **kwargs):
 
