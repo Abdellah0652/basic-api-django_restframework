@@ -110,6 +110,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
     # had fucntion katsm7 tktb smit focntion f postman ou tzid id like customers/deactivate/4/
     @action(detail=True)
     def deactivate(self, request, **kwargs):
+        table=["get-name"]
         customer = self.get_object()
         customer.active = False
 
